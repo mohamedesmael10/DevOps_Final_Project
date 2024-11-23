@@ -1,21 +1,21 @@
-# DevOps_Final_Project
+# Devops-Project
 
 This project is a Terraform-based infrastructure setup for a DevOps environment. It includes modules for various AWS resources such as VPC, subnets, security groups, load balancers, and more. Additionally, it uses Ansible for configuration management.
-
 
 ## Prerequisites
 
 - [Terraform](https://www.terraform.io/downloads.html) installed
 - [AWS CLI](https://aws.amazon.com/cli/) configured with appropriate credentials
 - [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) installed
+- [Docker](https://docs.docker.com/get-docker/) installed
 
 ## Setup
 
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/mohamedesmael10/DevOps_Final_Project.git
-    cd DevOps_Final_Project
+    git clone https://github.com/AyaOmer/Devops-Project.git
+    cd Devops-Project
     ```
 
 2. **Initialize Terraform:**
@@ -103,9 +103,21 @@ The Ansible playbook is located in the [ansible](./ansible) directory. It instal
     ./script.sh
     ```
 
-- **Dockerfile:**
+## Docker Configuration
 
-    The `Dockerfile` is also located in the [ansible](./ansible) directory. It builds and serves a React application using Nginx.
+The `Dockerfile` is located in the [Docker](./Docker) directory. It builds and serves a React application using Nginx.
+
+- **Build the Docker image:**
+
+    ```sh
+    docker build -t your-image-name Docker/
+    ```
+
+- **Run the Docker container:**
+
+    ```sh
+    docker run -p 80:80 your-image-name
+    ```
 
 ## Outputs
 
